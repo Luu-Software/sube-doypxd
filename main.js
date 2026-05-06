@@ -9,5 +9,38 @@ Distancia	  | Con SUBE registrada   | Con SUBE sin registrar
 */
 
 boton.addEventListener("click", () => {
-  // COMPLETAR
+  let subeRegistrado = registrada.value;
+  let distanciaViaje = distancia.value;
+
+  let resultado = 0;
+
+  if (subeRegistrado) {
+    if (distanciaViaje <= 3) {
+      resultado = 715.24;
+    } else if (distanciaViaje <= 6) {
+      resultado = 794.74;
+    } else if (distanciaViaje <= 12) {
+      resultado = 855.97;
+    } else if (distanciaViaje <= 27) {
+      resultado = 917.24;
+    } else {
+      tarifa.innerText = "¡Distancia demasiado grande! No tenemos tarifas disponibles.";
+    }
+  }
+  else {
+    if (distanciaViaje <= 3) {
+      resultado = 1137.23;
+    } else if (distanciaViaje <= 6) {
+      resultado = 1263.64;
+    } else if (distanciaViaje <= 12) {
+      resultado = 1360.99;
+    } else if (distanciaViaje <= 27) {
+      resultado = 1458.41;
+    } else {
+      tarifa.innerText = "¡Distancia demasiado grande! No tenemos tarifas disponibles.";
+    }
+  };
+  if (!(resultado === 0)) {
+  tarifa.innerText = "El costo equivalente de la tarifa seria de " + resultado + " ARS";
+  };
 });
