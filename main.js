@@ -9,12 +9,11 @@ Distancia	  | Con SUBE registrada   | Con SUBE sin registrar
 */
 
 boton.addEventListener("click", () => {
-  let subeRegistrado = registrada.value;
   let distanciaViaje = distancia.value;
-
   let resultado = 0;
 
-  if (subeRegistrado) {
+  // Podria usar directamente registrada.value pero ya
+  if (registrada.value === "si") {
     if (distanciaViaje <= 3) {
       resultado = 715.24;
     } else if (distanciaViaje <= 6) {
