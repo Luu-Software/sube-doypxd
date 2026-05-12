@@ -12,7 +12,6 @@ boton.addEventListener("click", () => {
   let distanciaViaje = distancia.value;
   let resultado = 0;
 
-  // Podria usar directamente registrada.value pero ya
   if (registrada.value === "si") {
     if (distanciaViaje <= 3) {
       resultado = 715.24;
